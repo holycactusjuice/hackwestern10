@@ -1,5 +1,6 @@
 import Camera from "./components/Camera"
 import React, {useRef, useState, useEffect} from "react";
+import InterpretedText from "./components/InterpretedText";
 
 const Home = () => {
   return (
@@ -8,12 +9,14 @@ const Home = () => {
         <h1 className="text-4xl font-bold mb-4">tranSLate</h1>
         <p className="text-lg">A way to communicate internationally through sign language.</p>
         
-        <div className="grid grid-cols-2">
+        <div className="m-8 grid grid-cols-2">
           <div>
-            <Camera></Camera>
+            <Camera/>
           </div>
           <div>
-            Translated text
+            <InterpretedText
+              text="hello this is a test of how it is"
+            />
           </div>
         </div>
       </main>
