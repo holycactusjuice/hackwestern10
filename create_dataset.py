@@ -19,7 +19,7 @@ labels = []
 
 for dir_ in os.listdir(DATA_DIR):
     for img_path in os.listdir(os.path.join(DATA_DIR, dir_)): #takes all the images from every collection
-        
+
         data_aux=[]
         img = cv2.imread(os.path.join(DATA_DIR, dir_, img_path)) #reads the image from the file (essentially reads every image)
         img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB) #converts the image into RBG (since OpenCV reads images in BGR format)

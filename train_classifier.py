@@ -7,10 +7,6 @@ from sklearn.metrics import accuracy_score
 import numpy as np
 
 data_dict = pickle.load(open('./data.pickle', 'rb'))
-for i in range(len(data_dict['data'])):
-    if not len(data_dict['data'][i]) == 42: 
-        print(i)
-        print(len(data_dict['data'][i]))
 
 #split the data into two sets so you can train your classifier -- one to train & test the performance
 data = np.asarray(data_dict['data'])
@@ -30,3 +26,7 @@ y_predict = model.predict(x_test) #made our predictions
 score = accuracy_score(y_predict, y_test)
 
 print('{}% of the samples were classified correctly !'.format(score*100))
+
+f = open('model.p', 'wb')
+pickle.dump({'model': model}, f)
+f.close()
