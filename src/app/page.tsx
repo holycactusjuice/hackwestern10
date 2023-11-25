@@ -1,3 +1,9 @@
+import Camera from "./components/Camera"
+
 export default function Home() {
-  return <div>Hello</div>
+  return <div>
+
+    <Camera />
+
+  </div>
 }
