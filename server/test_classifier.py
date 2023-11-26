@@ -3,7 +3,7 @@ import cv2
 import mediapipe as mp
 import numpy as np
 
-model_dict = pickle.load(open("./object_detection/model.p", "rb"))
+model_dict = pickle.load(open("./model.p", "rb"))
 model = model_dict["model"]
 
 mp_hands = mp.solutions.hands
@@ -19,9 +19,9 @@ while True:
 
     ret, frame = cap.read()
 
-    frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+    # frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
 
-    results = hands.process(frame_rgb)
+    results = hands.process(frame) # frame_rbg
 
     if results.multi_hand_landmarks:
         for hand_landmarks in results.multi_hand_landmarks:

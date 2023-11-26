@@ -2,7 +2,7 @@ import os
 import cv2
 
 # directory containing training data
-DATA_DIR = "./object_detection/data"
+DATA_DIR = "./data"
 # if directory does not yet exist, create one
 if not os.path.exists(DATA_DIR):
     os.makedirs(DATA_DIR)
