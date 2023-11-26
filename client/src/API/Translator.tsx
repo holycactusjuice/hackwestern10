@@ -14,7 +14,7 @@ const Translator: React.FC<TranslatorProps> = ({ text }) => {
 	        headers: {
                 'content-type': 'application/x-www-form-urlencoded',
             'Accept-Encoding': 'application/gzip',
-            'X-RapidAPI-Key': 'fe97b732d5msh277a29916ba192ep178ad2jsn071fc23278db',
+            'X-RapidAPI-Key': 'a3d420427cmsha3e3c6fccc8b3e3p185632jsn70f7cf7b69e1',
             'X-RapidAPI-Host': 'google-translate1.p.rapidapi.com'
             },
             body: new URLSearchParams({
