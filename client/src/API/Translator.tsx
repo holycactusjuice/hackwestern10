@@ -1,7 +1,11 @@
 import { useState } from "react";
 import { AiOutlineClose } from 'react-icons/ai';
 
-const Translator = () => {
+interface TranslatorProps {
+    text: string;
+}
+
+const Translator: React.FC<TranslatorProps> = ({ text }) => {
     const translate = () => {
         const url = 'https://google-translate1.p.rapidapi.com/language/translate/v2';
     
@@ -14,7 +18,7 @@ const Translator = () => {
             'X-RapidAPI-Host': 'google-translate1.p.rapidapi.com'
             },
             body: new URLSearchParams({
-                q: 'Hello, world!',
+                q: text,
                 target: 'fr',
                 source: 'en'
             })
@@ -57,8 +61,5 @@ const Translator = () => {
         </section>
     )
 };
-
-   
-
 
 export default Translator;
