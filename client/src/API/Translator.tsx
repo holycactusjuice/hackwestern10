@@ -30,16 +30,16 @@ const Translator: React.FC<TranslatorProps> = ({ text }) => {
             .catch(err => console.error(err));
     }
     return(
-        <section className="translator">
+        <section className="translator text-black">
             <div className="row-wrapper">
                 <div className="translator-container input-lang">
                     <div className="top-row">
-                        <button className="btn btn-primary btn-translate" onClick={translate}>
+                        <button className="btn btn-primary btn-translate text-black" onClick={translate}>
                             Translate
                         </button>
                     </div>
                     <form className="input-form">
-                        <textarea className="text-box" placeholder="Enter text (any language)">
+                        <textarea className="text-box text-black" placeholder="Enter text (any language)">
                         </textarea>
                     </form>
                 </div>
@@ -52,7 +52,7 @@ const Translator: React.FC<TranslatorProps> = ({ text }) => {
                             <option value="de">German</option>
                             <option value="es">Spanish</option>
                         </select>
-                        <p className="text-box output-box">
+                        <p className="text-black text-box output-box">
                             Output text
                         </p>
                     </div>
