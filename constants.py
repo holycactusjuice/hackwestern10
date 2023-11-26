@@ -9,8 +9,10 @@ VIDEO_DATA_PATH = os.path.join('video_data')
 # Actions that we try to detect
 actions = np.array(['hello', 'thanks', 'I love you'])
 
-# Thirty videos worth of data
-no_videos = 5
+# number of videos of data
+no_videos = 30
 
-# Videos are going to be 30 frames in length
+# number of frames per video
 video_frames = 30
+
+# from constants import NUMPY_DATA_PATH, VIDEO_DATA_PATH, actions, no_videos, video_frames

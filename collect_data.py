@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 import os
 
-from constants import NUMPY_DATA_PATH, VIDEO_DATA_PATH, actions, no_videos, video_frames
+from constants import VIDEO_DATA_PATH, actions, no_videos, video_frames
 
 # make new directory for each video for each action
 for action in actions:
@@ -28,7 +28,7 @@ for action in actions:
                         cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 0), 1, cv2.LINE_AA)
             cv2.imshow("frame", frame)
             # begin capturing images on key press
-            if cv2.waitKey(25) == ord('q'):
+            if cv2.waitKey(10) == ord('q'):
                 break
 
         # Loop through video length aka sequence length
@@ -38,7 +38,6 @@ for action in actions:
             ret, frame = cap.read()
 
             cv2.imshow("frame", frame)
-            cv2.waitKey(25)
 
             cv2.imwrite(os.path.join(
                 VIDEO_DATA_PATH, action, str(vid), str(frame_num) + ".jpg"), frame)

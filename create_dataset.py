@@ -102,7 +102,6 @@ with mp_holistic.Holistic(min_detection_confidence=0.5, min_tracking_confidence=
 
                 # get keypoints
                 keypoints = extract_keypoints(results)
-                print(keypoints)
 
                 # path for numpy binary file
                 npy_path = os.path.join(

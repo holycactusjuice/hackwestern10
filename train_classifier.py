@@ -1,18 +1,13 @@
-import cv2
 import numpy as np
 import os
-from matplotlib import pyplot as plt
-import time
-import mediapipe as mp
 
 from sklearn.model_selection import train_test_split
 from keras.utils import to_categorical
-
-from tensorflow.python.keras.models import Sequential
+from keras.models import load_model, Sequential
 from keras.layers import LSTM, Dense
-from tensorflow.python.keras.callbacks import TensorBoard
+from keras.callbacks import TensorBoard
 
-from constants import NUMPY_DATA_PATH, actions, no_videos, video_frames
+from constants import NUMPY_DATA_PATH, actions, video_frames
 
 label_map = {label: num for num, label in enumerate(actions)}
 
@@ -22,13 +17,14 @@ for action in actions:
         window = []
         for frame_num in range(video_frames):
             res = np.load(os.path.join(NUMPY_DATA_PATH, action,
-                          str(sequence), "{}.npy".format(frame_num)))
+                          str(sequence), f"{frame_num}.npy"))
             window.append(res)
         sequences.append(window)
         labels.append(label_map[action])
 
 X = np.array(sequences)
 y = to_categorical(labels).astype(int)
+
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.05)
 
@@ -49,4 +45,4 @@ model.compile(optimizer='Adam', loss='categorical_crossentropy',
 
 model.fit(X_train, y_train, epochs=2000, callbacks=[tb_callback])
 
-print(model.summary)
+model.save('action.keras')
