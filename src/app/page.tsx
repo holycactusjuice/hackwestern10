@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-white text-black text-center">
       <main className="container mx-auto p-4">
-        <h1 className="text-4xl font-bold mb-4">tranSLate us</h1>
+        <h1 className="text-4xl font-bold mb-4">tranSLate</h1>
         <p className="text-lg">A way to communicate internationally through sign language.</p>
         
         <div className="m-8 grid grid-cols-2">
