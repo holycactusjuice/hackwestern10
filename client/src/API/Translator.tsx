@@ -35,11 +35,10 @@ const Translator: React.FC<TranslatorProps> = ({ text }) => {
                 <div className="translator-container input-lang">
                     <div className="top-row">
                         <button className="btn btn-primary btn-translate text-black" onClick={translate}>
-                            Translate
                         </button>
                     </div>
                     <form className="input-form">
-                        <textarea className="text-box text-black" placeholder="Enter text (any language)">
+                        <textarea className="text-box text-black align-center" placeholder="Enter text (any language)">
                         </textarea>
                     </form>
                 </div>
@@ -52,9 +51,9 @@ const Translator: React.FC<TranslatorProps> = ({ text }) => {
                             <option value="de">German</option>
                             <option value="es">Spanish</option>
                         </select>
-                        <p className="text-black text-box output-box">
+                        {/* <p className="text-black text-box output-box">
                             Output text
-                        </p>
+                        </p> */}
                     </div>
                 </div>
             </div>
