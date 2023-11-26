@@ -3,6 +3,6 @@ import Webcam from "react-webcam";
 
 export default function Camera() {
   return <div> 
-    <Webcam></Webcam>
+    <Webcam className="rounded-lg shadow-md"></Webcam>
     </div>
 }
