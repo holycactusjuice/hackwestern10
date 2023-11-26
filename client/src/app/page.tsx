@@ -1,6 +1,16 @@
 import Camera from "./components/Camera"
 import React, {useRef, useState, useEffect} from "react";
 import InterpretedText from "./components/InterpretedText";
+import { exec, spawn, fork } from "child_process";
+
+exec("echo hello", (err, stdout, stderr) => {
+  if (err) {
+    console.error(`exec error: ${err}`);
+    return;
+  }
+  console.log(`stdout: ${stdout}`);
+  console.log(`stdout: ${stderr}`);
+})
 
 const Home = () => {
   return (
@@ -11,11 +21,11 @@ const Home = () => {
         
         <div className="m-8 grid grid-cols-2">
           <div>
-            <Camera/>
+            
+            <Camera />
           </div>
           <div>
-            <InterpretedText
-            />
+            <InterpretedText text="dsfjasld ljdfajkldf jakd fslkjd fkl adfskjldfsjl ljdfas  lkjadflj dsaj dsfjasld ljdfajkldfajkldf jakd fslkjd fkl adfskjldfsjl ljdfas  lkjadflj dsaj dsfjasld ljdfajklajkldf jakd fslkjd fkl adfskjldfsjl ljdfas  lkjadflj dsaj dsfjasld ljdfajklajkldf jakd fslkjd fkl adfskjldfsjl ljdfas  lkjadflj dsaj dsfjasld ljdfajklajkldf jakd fslkjd fkl adfskjldfsjl ljdfas  lkjadflj dsaj dsfjasld ljdfajklajkldf jakd fslkjd fkl adfskjldfsjl ljdfas  lkjadflj dsaj dsfjasld ljdfajkl jakd fslkjd fkl adfskjldfsjl ljdfas  lkjadflj dsaj dsfjasld ljdfajkldf jakd fslkjd fkl adfskjldfsjl ljdfas  lkjadflj dsaj dsfjasld ljdfajkldf jakd fslkjd fkl adfskjldfsjl ljdfas  lkjadflj dsaj dsfjasld ljdfajkldf jakd fslkjd fkl adfskjldfsjl ljdfas  lkjadflj dsaj dsfjasld ljdfajkldf jakd fslkjd fkl adfskjldfsjl ljdfas  lkjadflj dsaj dsfjasld ljdfajkldf jakd fslkjd fkl adfskjldfsjl ljdfas  lkjadflj dsaj dsfjasld ljdfajkldf jakd fslkjd fkl adfskjldfsjl ljdfas  lkjadflj dsaj dsfjasld ljdfajkldf jakd fslkjd fkl adfskjldfsjl ljdfas  lkjadflj dsaj dsfjasld ljdfajkldf jakd fslkjd fkl adfskjldfsjl ljdfas  lkjadflj dsaj dsfjasld ljdfajkldf jakd fslkjd fkl adfskjldfsjl ljdfas  lkjadflj dsaj dsfjka kjlsda"/>
           </div>
         </div>
 
