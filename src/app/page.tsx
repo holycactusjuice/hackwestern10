@@ -15,7 +15,6 @@ const Home = () => {
           </div>
           <div>
             <InterpretedText
-              text="Puppies are adorable and playful animals that bring immense joy and companionship to people's lives. With their wagging tails, curious nature, and innocent eyes, they have the ability to melt hearts and bring smiles to faces. Whether they are running around, chasing their tails, or cuddling up for a nap, puppies have a special way of brightening up any day. Puppies are adorable and playful animals that bring immense joy and companionship to people's lives. With their wagging tails, curious nature, and innocent eyes, they have the ability to melt hearts and bring smiles to faces. Whether they are running around, chasing their tails, or cuddling up for a nap, puppies have a special way of brightening up any day.              "
             />
           </div>
         </div>
