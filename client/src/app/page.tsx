@@ -28,7 +28,7 @@ const Home = () => {
           </div>
           <div className="bg-white p-6 rounded-lg shadow-md">
             <h2 className="text-3xl text-black font-semibold mb-4">Interpreted text</h2>
-            <InterpretedText text="Dogs, often referred to as man's best friend, embody the perfect blend of loyalty, companionship, and joy. These four-legged companions have been an integral part of human history for thousands of years, serving various roles from loyal working partners to cherished family members. Beyond their diverse breeds and sizes, dogs universally share the remarkable ability to form deep, emotional connections with their human counterparts. Their infectious enthusiasm, unwavering loyalty, and innate understanding of human emotions make them not only beloved pets but also valuable therapy and service animals. Whether playfully chasing a ball, providing a comforting presence during tough times, or showcasing their intelligence through training, dogs bring boundless love and warmth into our lives, leaving an indelible paw print on our hearts." />
+            <InterpretedText text="Dogs, often referred to as man's best friend" />
           </div>
         </div>
 
