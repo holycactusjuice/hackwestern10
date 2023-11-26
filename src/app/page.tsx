@@ -19,6 +19,10 @@ const Home = () => {
             />
           </div>
         </div>
+
+        <div className="m-8">
+          
+        </div>
       </main>
     </div>
   );
